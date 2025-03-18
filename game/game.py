@@ -17,7 +17,7 @@ def play_game():
     print("Welcome to the Paper Rock Scissors game!")
 
     # Get the user's choice
-    user_choice = input("Please choose either 'paper', 'rock', or 'scissors': ")
+    user_choice = raw_input("Please choose either 'paper', 'rock', or 'scissors': ")
 
     # Get the computer's choice
     computer_choice = get_computer_choice()
@@ -26,11 +26,11 @@ def play_game():
     result = compare_choices(user_choice, computer_choice)
 
     # Print the results
-    print(f"You chose {user_choice}, and the computer chose {computer_choice}.")
+    print("You chose %s, and the computer chose %s." % (user_choice, computer_choice))
     print(result)
 
     # Ask the user if they want to play again
-    play_again = input("Do you want to play again? (yes/no): ")
+    play_again = raw_input("Do you want to play again? (yes/no): ")
     if play_again.lower() == "yes":
         play_game()
 
@@ -39,4 +39,3 @@ def play_game():
 
 # Call the function to start the game
 play_game()
-
