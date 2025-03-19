@@ -1,23 +1,16 @@
 import random
+from sub.game_logic import compare_choices, get_computer_choice
 
 def get_computer_choice():
-    choices = ['paper', 'rock', 'scissors']
+    choices = ['r', 'p', 's']  # Use shorthand values
     return random.choice(choices)
-
-def compare_choices(user_choice, computer_choice):
-    if user_choice == computer_choice:
-        return "It's a tie!"
-    elif (user_choice == 'rock' and computer_choice == 'scissors') or (user_choice == 'paper' and computer_choice == 'rock') or (user_choice == 'scissors' and computer_choice == 'paper'):
-        return "You win!"
-    else:
-        return "Computer wins!"
 
 def play_game():
     # Provide a welcome message
     print("Welcome to the Paper Rock Scissors game!")
 
     # Get the user's choice
-    user_choice = raw_input("Please choose either 'paper', 'rock', or 'scissors': ")
+    user_choice = raw_input("Please choose either 'r' (rock), 'p' (paper), or 's' (scissors): ")
 
     # Get the computer's choice
     computer_choice = get_computer_choice()
