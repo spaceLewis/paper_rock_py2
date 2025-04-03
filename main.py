@@ -1,5 +1,4 @@
 import random
-from sub.game_logic import compare_choices
 
 def get_computer_choice():
     choices = ['r', 'p', 's']  # Use shorthand values
